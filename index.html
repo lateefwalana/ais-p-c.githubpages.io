@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!--
+    DEPLOYMENT INSTRUCTIONS — GITHUB PAGES
+    1. Create a new GitHub repository (e.g. apex-irishstack-site)
+    2. Upload all three files: index.html, styles.css, script.js
+       (all must be in the root of the repository)
+    3. Go to Settings > Pages > Source: Deploy from branch > main > / (root)
+    4. Save — site will be live at:
+       https://yourusername.github.io/apex-irishstack-site
+    5. Replace PLACEHOLDER in WhatsApp links with your real number in E.164 format
+       e.g. wa.me/35312345678 for an Irish number
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apex IrishStack — Your trusted source for industrial spare parts. Genuine OEM & aftermarket components for air compressors, diesel engines, mining equipment, hydraulics and more. Supplying globally from Ireland." />
+  <meta name="keywords" content="industrial spare parts, OEM parts, air compressor parts, diesel engine parts, mining equipment parts, hydraulics, Ireland, global supplier" />
+  <meta name="author" content="Apex IrishStack" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Apex IrishStack — Industrial Spare Parts Supplier" />
+  <meta property="og:description" content="Your trusted source for industrial spare parts. Supplying genuine OEM & aftermarket parts globally from Ireland." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://apex-irishstack.ie/og-image.jpg" />
+  <meta property="og:url" content="https://apex-irishstack.ie" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Apex IrishStack — Industrial Spare Parts Supplier" />
+  <meta name="twitter:description" content="Your trusted source for industrial spare parts. Supplying globally from Ireland." />
+
+  <title>Apex IrishStack — Industrial Spare Parts Supplier</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230F1117'/><text y='0.9em' x='50%' text-anchor='middle' font-size='58' font-family='Arial Black,sans-serif' font-weight='900' fill='%23F97316' dy='-0.05em'>A</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Apex IrishStack Home">
+        <svg class="logo-icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="19" cy="19" r="19" fill="#F97316"/>
+          <path d="M19 7L28 28H10L19 7Z" fill="white" stroke="white" stroke-width="0.5"/>
+          <line x1="13" y1="22" x2="25" y2="22" stroke="#F97316" stroke-width="2.5"/>
+        </svg>
+        <span class="logo-text">Apex <span class="logo-accent">IrishStack</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#quote" class="nav-link">Get a Quote</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <a href="#quote" class="btn-cta-nav">Get a Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#categories" class="mobile-link">Categories</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#quote" class="mobile-link highlight">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-bg-gradient" aria-hidden="true"></div>
+
+    <div class="hero-content animate-on-scroll">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Serving customers globally from Ireland 🇮🇪
+      </div>
+      <h1 class="hero-title">Your Trusted Source for<br><span class="hero-accent">Industrial Spare Parts</span></h1>
+      <p class="hero-sub">Supplying genuine OEM &amp; aftermarket parts globally — from Ireland to the world. 11 categories. 100+ premium brands.</p>
+      <div class="hero-ctas">
+        <a href="#categories" class="btn-primary">Browse Categories</a>
+        <a href="#quote" class="btn-outline">Request a Quote</a>
+      </div>
+    </div>
+
+    <!-- Brand Logo Slider -->
+    <div class="slider-wrapper" aria-label="Our partner brands">
+      <p class="slider-label">Trusted brands we supply</p>
+      <div class="slider-track-outer">
+        <div class="slider-track" id="sliderTrack">
+
+          <!-- Slide items — duplicated in JS for infinite loop -->
+          <div class="brand-slide" data-brand="Atlas Copco" data-domain="atlascopco.com">
+            <img src="https://logo.clearbit.com/atlascopco.com" alt="Atlas Copco" loading="lazy" />
+            <span>Atlas Copco</span>
+          </div>
+          <div class="brand-slide" data-brand="Ingersoll Rand" data-domain="ingersollrand.com">
+            <img src="https://logo.clearbit.com/ingersollrand.com" alt="Ingersoll Rand" loading="lazy" />
+            <span>Ingersoll Rand</span>
+          </div>
+          <div class="brand-slide" data-brand="Cummins" data-domain="cummins.com">
+            <img src="https://logo.clearbit.com/cummins.com" alt="Cummins" loading="lazy" />
+            <span>Cummins</span>
+          </div>
+          <div class="brand-slide" data-brand="Caterpillar" data-domain="cat.com">
+            <img src="https://logo.clearbit.com/cat.com" alt="Caterpillar" loading="lazy" />
+            <span>Caterpillar</span>
+          </div>
+          <div class="brand-slide" data-brand="ABB" data-domain="abb.com">
+            <img src="https://logo.clearbit.com/abb.com" alt="ABB" loading="lazy" />
+            <span>ABB</span>
+          </div>
+          <div class="brand-slide" data-brand="Siemens" data-domain="siemens.com">
+            <img src="https://logo.clearbit.com/siemens.com" alt="Siemens" loading="lazy" />
+            <span>Siemens</span>
+          </div>
+          <div class="brand-slide" data-brand="Bosch" data-domain="bosch.com">
+            <img src="https://logo.clearbit.com/bosch.com" alt="Bosch" loading="lazy" />
+            <span>Bosch</span>
+          </div>
+          <div class="brand-slide" data-brand="DeWalt" data-domain="dewalt.com">
+            <img src="https://logo.clearbit.com/dewalt.com" alt="DeWalt" loading="lazy" />
+            <span>DeWalt</span>
+          </div>
+          <div class="brand-slide" data-brand="Fluke" data-domain="fluke.com">
+            <img src="https://logo.clearbit.com/fluke.com" alt="Fluke" loading="lazy" />
+            <span>Fluke</span>
+          </div>
+          <div class="brand-slide" data-brand="Grundfos" data-domain="grundfos.com">
+            <img src="https://logo.clearbit.com/grundfos.com" alt="Grundfos" loading="lazy" />
+            <span>Grundfos</span>
+          </div>
+          <div class="brand-slide" data-brand="SKF" data-domain="skf.com">
+            <img src="https://logo.clearbit.com/skf.com" alt="SKF" loading="lazy" />
+            <span>SKF</span>
+          </div>
+          <div class="brand-slide" data-brand="Parker" data-domain="parker.com">
+            <img src="https://logo.clearbit.com/parker.com" alt="Parker" loading="lazy" />
+            <span>Parker</span>
+          </div>
+          <div class="brand-slide" data-brand="Komatsu" data-domain="komatsu.com">
+            <img src="https://logo.clearbit.com/komatsu.com" alt="Komatsu" loading="lazy" />
+            <span>Komatsu</span>
+          </div>
+          <div class="brand-slide" data-brand="Epiroc" data-domain="epiroc.com">
+            <img src="https://logo.clearbit.com/epiroc.com" alt="Epiroc" loading="lazy" />
+            <span>Epiroc</span>
+          </div>
+          <div class="brand-slide" data-brand="Eaton" data-domain="eaton.com">
+            <img src="https://logo.clearbit.com/eaton.com" alt="Eaton" loading="lazy" />
+            <span>Eaton</span>
+          </div>
+          <div class="brand-slide" data-brand="Schneider Electric" data-domain="se.com">
+            <img src="https://logo.clearbit.com/se.com" alt="Schneider Electric" loading="lazy" />
+            <span>Schneider</span>
+          </div>
+          <div class="brand-slide" data-brand="Wilo" data-domain="wilo.com">
+            <img src="https://logo.clearbit.com/wilo.com" alt="Wilo" loading="lazy" />
+            <span>Wilo</span>
+          </div>
+          <div class="brand-slide" data-brand="Makita" data-domain="makita.com">
+            <img src="https://logo.clearbit.com/makita.com" alt="Makita" loading="lazy" />
+            <span>Makita</span>
+          </div>
+          <div class="brand-slide" data-brand="Timken" data-domain="timken.com">
+            <img src="https://logo.clearbit.com/timken.com" alt="Timken" loading="lazy" />
+            <span>Timken</span>
+          </div>
+          <div class="brand-slide" data-brand="Gates" data-domain="gates.com">
+            <img src="https://logo.clearbit.com/gates.com" alt="Gates" loading="lazy" />
+            <span>Gates</span>
+          </div>
+          <div class="brand-slide" data-brand="Kubota" data-domain="kubota.com">
+            <img src="https://logo.clearbit.com/kubota.com" alt="Kubota" loading="lazy" />
+            <span>Kubota</span>
+          </div>
+          <div class="brand-slide" data-brand="Perkins" data-domain="perkins.com">
+            <img src="https://logo.clearbit.com/perkins.com" alt="Perkins" loading="lazy" />
+            <span>Perkins</span>
+          </div>
+          <div class="brand-slide" data-brand="Graco" data-domain="graco.com">
+            <img src="https://logo.clearbit.com/graco.com" alt="Graco" loading="lazy" />
+            <span>Graco</span>
+          </div>
+          <div class="brand-slide" data-brand="Enerpac" data-domain="enerpac.com">
+            <img src="https://logo.clearbit.com/enerpac.com" alt="Enerpac" loading="lazy" />
+            <span>Enerpac</span>
+          </div>
+
+        </div><!-- end slider-track -->
+      </div><!-- end slider-track-outer -->
+    </div><!-- end slider-wrapper -->
+
+  </section>
+
+
+  <!-- ============================================================
+       CATEGORIES SECTION
+  ============================================================ -->
+  <section class="categories-section section-pad" id="categories">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">What We Supply</span>
+        <h2 class="section-title">Our Product Categories</h2>
+        <p class="section-sub">Genuine OEM &amp; quality aftermarket parts across 11 industrial categories</p>
+      </div>
+
+      <div class="categories-grid">
+
+        <!-- 1. Air Compressors -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Air Compressors category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="4" y="14" width="28" height="14" rx="3" stroke="#F97316" stroke-width="2"/>
+              <rect x="10" y="8" width="16" height="8" rx="2" stroke="#F97316" stroke-width="2"/>
+              <circle cx="10" cy="31" r="3" stroke="#F97316" stroke-width="2"/>
+              <circle cx="26" cy="31" r="3" stroke="#F97316" stroke-width="2"/>
+              <path d="M18 14V8" stroke="#F97316" stroke-width="2"/>
+              <path d="M8 21h4M8 25h8" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Air Compressors</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/atlascopco.com" alt="" loading="lazy" onerror="this.style.display='none'" />Atlas Copco</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/ingersollrand.com" alt="" loading="lazy" onerror="this.style.display='none'" />Ingersoll Rand</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/sullair.com" alt="" loading="lazy" onerror="this.style.display='none'" />Sullair</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/doosan.com" alt="" loading="lazy" onerror="this.style.display='none'" />Doosan</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/quincycompressor.com" alt="" loading="lazy" onerror="this.style.display='none'" />Quincy</span>
+          </div>
+        </article>
+
+        <!-- 2. Diesel Engines -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Diesel Engines category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="10" width="30" height="18" rx="3" stroke="#F97316" stroke-width="2"/>
+              <path d="M10 10V7M18 10V5M26 10V7" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <rect x="8" y="14" width="6" height="8" rx="1" stroke="#F97316" stroke-width="1.5"/>
+              <rect x="15" y="14" width="6" height="8" rx="1" stroke="#F97316" stroke-width="1.5"/>
+              <rect x="22" y="14" width="6" height="8" rx="1" stroke="#F97316" stroke-width="1.5"/>
+              <path d="M3 18h30" stroke="#F97316" stroke-width="1" stroke-dasharray="2 2"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Diesel Engines</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/kubota.com" alt="" loading="lazy" onerror="this.style.display='none'" />Kubota</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/cat.com" alt="" loading="lazy" onerror="this.style.display='none'" />CAT</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/deutz.com" alt="" loading="lazy" onerror="this.style.display='none'" />Deutz</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/cummins.com" alt="" loading="lazy" onerror="this.style.display='none'" />Cummins</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/volvopenta.com" alt="" loading="lazy" onerror="this.style.display='none'" />Volvo Penta</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/mtu.com" alt="" loading="lazy" onerror="this.style.display='none'" />MTU</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/perkins.com" alt="" loading="lazy" onerror="this.style.display='none'" />Perkins</span>
+          </div>
+        </article>
+
+        <!-- 3. Electric -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Electric category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20 4L8 20h10l-2 12 14-18H20L20 4Z" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Electric</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/abb.com" alt="" loading="lazy" onerror="this.style.display='none'" />ABB</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/siemens.com" alt="" loading="lazy" onerror="this.style.display='none'" />Siemens</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/se.com" alt="" loading="lazy" onerror="this.style.display='none'" />Schneider</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/eaton.com" alt="" loading="lazy" onerror="this.style.display='none'" />Eaton</span>
+          </div>
+        </article>
+
+        <!-- 4. Pneumatic, Power & Hand Tools -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Pneumatic Power and Hand Tools category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6 30L22 14l4 4L10 34 6 30Z" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M22 14l4-4 4 4-4 4-4-4Z" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M26 10l2-6 4 2-2 6" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Pneumatic, Power &amp; Hand Tools</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/cp.com" alt="" loading="lazy" onerror="this.style.display='none'" />Chicago Pneumatic</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/ingersollrand.com" alt="" loading="lazy" onerror="this.style.display='none'" />Ingersoll Rand</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/dewalt.com" alt="" loading="lazy" onerror="this.style.display='none'" />DeWalt</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/proto.com" alt="" loading="lazy" onerror="this.style.display='none'" />Proto</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/stanleytools.com" alt="" loading="lazy" onerror="this.style.display='none'" />Stanley Tools</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/facom.com" alt="" loading="lazy" onerror="this.style.display='none'" />Facom</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/atlascopco.com" alt="" loading="lazy" onerror="this.style.display='none'" />Atlas Copco Breakers</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/bosch.com" alt="" loading="lazy" onerror="this.style.display='none'" />Bosch</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/makita.com" alt="" loading="lazy" onerror="this.style.display='none'" />Makita</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/knipex.com" alt="" loading="lazy" onerror="this.style.display='none'" />Knipex</span>
+          </div>
+        </article>
+
+        <!-- 5. Testing Instruments -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Testing Instruments category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="6" width="24" height="24" rx="3" stroke="#F97316" stroke-width="2"/>
+              <path d="M12 24l4-6 4 4 4-8" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="28" cy="10" r="3" fill="#F97316"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Testing Instruments</h3>
+          <div class="brand-pills">
+            <span class="brand-pill">Argus</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/fluke.com" alt="" loading="lazy" onerror="this.style.display='none'" />Fluke</span>
+            <span class="brand-pill">Kyoritsu</span>
+            <span class="brand-pill">Sumitomo</span>
+          </div>
+        </article>
+
+        <!-- 6. Kitchen Equipment -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Kitchen Equipment category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 4v10c0 3.3 2.7 6 6 6h8c3.3 0 6-2.7 6-6V4" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <path d="M18 20v12M12 32h12" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 4v6M18 4v8M24 4v6" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Kitchen Equipment</h3>
+          <div class="brand-pills">
+            <span class="brand-pill">E.G.O</span>
+            <span class="brand-pill">Beha Hedo</span>
+            <span class="brand-pill">Bertos</span>
+          </div>
+        </article>
+
+        <!-- 7. Mining Equipment -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Mining Equipment category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 28l8-16 6 8 5-6 9 14H4Z" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="27" cy="10" r="4" stroke="#F97316" stroke-width="2"/>
+              <path d="M24 13l-4 5" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Mining Equipment</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/epiroc.com" alt="" loading="lazy" onerror="this.style.display='none'" />Epiroc</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/komatsu.com" alt="" loading="lazy" onerror="this.style.display='none'" />Komatsu</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/liugong.com" alt="" loading="lazy" onerror="this.style.display='none'" />LiuGong</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/cat.com" alt="" loading="lazy" onerror="this.style.display='none'" />Caterpillar</span>
+          </div>
+        </article>
+
+        <!-- 8. Bearings -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Bearings category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="18" cy="18" r="13" stroke="#F97316" stroke-width="2"/>
+              <circle cx="18" cy="18" r="7" stroke="#F97316" stroke-width="2"/>
+              <circle cx="18" cy="18" r="2" fill="#F97316"/>
+              <circle cx="18" cy="5" r="2" fill="#F97316"/>
+              <circle cx="18" cy="31" r="2" fill="#F97316"/>
+              <circle cx="5" cy="18" r="2" fill="#F97316"/>
+              <circle cx="31" cy="18" r="2" fill="#F97316"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Bearings</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/timken.com" alt="" loading="lazy" onerror="this.style.display='none'" />Timken</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/skf.com" alt="" loading="lazy" onerror="this.style.display='none'" />SKF</span>
+          </div>
+        </article>
+
+        <!-- 9. Hydraulics -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Hydraulics category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M10 6C10 6 6 12 6 18c0 6.6 5.4 12 12 12s12-5.4 12-12c0-6-4-12-4-12" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <path d="M18 10v8l5 3" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="18" cy="18" r="3" stroke="#F97316" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Hydraulics</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/enerpac.com" alt="" loading="lazy" onerror="this.style.display='none'" />Enerpac</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/parker.com" alt="" loading="lazy" onerror="this.style.display='none'" />Parker</span>
+          </div>
+        </article>
+
+        <!-- 10. Pumps -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Pumps category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="18" cy="18" r="9" stroke="#F97316" stroke-width="2"/>
+              <path d="M18 9V4M18 32v-5" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <path d="M9 18H4M32 18h-5" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12.5 12.5L9 9M27 27l-3.5-3.5" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="18" cy="18" r="3" fill="#F97316"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Pumps</h3>
+          <p class="cat-sub">Centrifugal, Vertical &amp; more</p>
+          <div class="brand-pills">
+            <span class="brand-pill">Sandpiper</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/graco.com" alt="" loading="lazy" onerror="this.style.display='none'" />Graco</span>
+            <span class="brand-pill">ARO</span>
+            <span class="brand-pill">Worthington</span>
+            <span class="brand-pill">Pacific Pumps</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/wilo.com" alt="" loading="lazy" onerror="this.style.display='none'" />Wilo</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/grundfos.com" alt="" loading="lazy" onerror="this.style.display='none'" />Grundfos</span>
+          </div>
+        </article>
+
+        <!-- 11. Power Transmission -->
+        <article class="cat-card animate-on-scroll" tabindex="0" aria-label="Power Transmission category">
+          <div class="cat-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="10" cy="18" r="7" stroke="#F97316" stroke-width="2"/>
+              <circle cx="26" cy="18" r="7" stroke="#F97316" stroke-width="2"/>
+              <path d="M10 11h16M10 25h16" stroke="#F97316" stroke-width="1.5" stroke-dasharray="2 1"/>
+              <circle cx="10" cy="18" r="2" fill="#F97316"/>
+              <circle cx="26" cy="18" r="2" fill="#F97316"/>
+            </svg>
+          </div>
+          <h3 class="cat-name">Power Transmission</h3>
+          <div class="brand-pills">
+            <span class="brand-pill"><img src="https://logo.clearbit.com/gates.com" alt="" loading="lazy" onerror="this.style.display='none'" />V-Belts (Gates)</span>
+            <span class="brand-pill"><img src="https://logo.clearbit.com/ktr.com" alt="" loading="lazy" onerror="this.style.display='none'" />KTR Couplings</span>
+            <span class="brand-pill">Mechanical Seals</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHY CHOOSE US
+  ============================================================ -->
+  <section class="why-section section-pad" id="why">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Why Apex IrishStack</span>
+        <h2 class="section-title">Built for Industry. Trusted Globally.</h2>
+      </div>
+      <div class="why-grid">
+
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="16" cy="16" r="13" stroke="#F97316" stroke-width="2"/>
+              <path d="M4 16h5M23 16h5M16 4v5M16 23v5" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 8l3 3M21 21l3 3M8 24l3-3M21 11l3-3" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Global Reach</h3>
+          <p>Supplying industrial parts to customers worldwide from our Irish base — every continent, every time zone.</p>
+        </div>
+
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 16l8 8L27 8" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Genuine Parts</h3>
+          <p>OEM-certified and quality-assured aftermarket components — sourced directly from authorised distributors.</p>
+        </div>
+
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16 4l2 8h8l-6.5 4.7 2.5 7.7L16 20l-6 4.4 2.5-7.7L6 12h8L16 4Z" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Fast Dispatch</h3>
+          <p>Streamlined logistics with rapid international shipping — minimise downtime and keep your operations running.</p>
+        </div>
+
+        <div class="why-card animate-on-scroll">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="16" cy="12" r="6" stroke="#F97316" stroke-width="2"/>
+              <path d="M4 28c0-5.5 5.4-10 12-10s12 4.5 12 10" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Expert Support</h3>
+          <p>Technical advice from specialists who know the equipment — get the right part identified correctly, first time.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section class="about-section section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-text animate-on-scroll">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">About Apex IrishStack</h2>
+          <p>Apex IrishStack is an Irish-based global supplier of industrial spare parts, serving industries including oil &amp; gas, mining, construction, marine, and manufacturing. We stock and source genuine OEM and quality aftermarket components from the world's leading brands, delivering to customers across every continent.</p>
+          <p>Our deep technical expertise and strong supplier relationships mean you get the right part, fast — wherever you are in the world.</p>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number" data-target="11" data-suffix="+">0+</span>
+              <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="100" data-suffix="+">0+</span>
+              <span class="stat-label">Premium Brands</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="6" data-suffix="">0</span>
+              <span class="stat-label">Continents Served</span>
+            </div>
+          </div>
+
+          <a href="#quote" class="btn-primary">Request a Quote</a>
+        </div>
+
+        <div class="about-art animate-on-scroll" aria-hidden="true">
+          <div class="geo-wrap">
+            <div class="geo-ring geo-ring-1"></div>
+            <div class="geo-ring geo-ring-2"></div>
+            <div class="geo-ring geo-ring-3"></div>
+            <div class="geo-cog geo-cog-1">
+              <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="42" stroke="#F97316" stroke-width="3" stroke-dasharray="8 4"/>
+                <circle cx="60" cy="60" r="28" stroke="#F97316" stroke-width="2"/>
+                <circle cx="60" cy="60" r="12" fill="#F97316" opacity="0.2" stroke="#F97316" stroke-width="2"/>
+                <path d="M60 14v12M60 94v12M14 60h12M94 60h12" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+                <path d="M27.5 27.5l8.5 8.5M84 84l8.5 8.5M92.5 27.5l-8.5 8.5M36 84l-8.5 8.5" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="geo-cog geo-cog-2">
+              <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="35" cy="35" r="24" stroke="#F97316" stroke-width="2" stroke-dasharray="5 3" opacity="0.6"/>
+                <circle cx="35" cy="35" r="12" stroke="#F97316" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="35" cy="35" r="5" fill="#F97316" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="geo-lines">
+              <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="100" x2="200" y2="100" stroke="#F97316" stroke-width="1" opacity="0.2"/>
+                <line x1="100" y1="0" x2="100" y2="200" stroke="#F97316" stroke-width="1" opacity="0.2"/>
+                <line x1="0" y1="0" x2="200" y2="200" stroke="#F97316" stroke-width="1" opacity="0.15"/>
+                <line x1="200" y1="0" x2="0" y2="200" stroke="#F97316" stroke-width="1" opacity="0.15"/>
+                <rect x="60" y="60" width="80" height="80" stroke="#F97316" stroke-width="1" opacity="0.2" transform="rotate(45 100 100)"/>
+              </svg>
+            </div>
+            <div class="geo-badge">
+              <span>🇮🇪</span>
+              <span>Ireland</span>
+              <span class="geo-badge-sub">Global Supply</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       QUOTE FORM SECTION
+  ============================================================ -->
+  <section class="quote-section section-pad" id="quote">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Request a Quote</h2>
+        <p class="section-sub">Tell us what you need and we'll get back to you promptly</p>
+      </div>
+
+      <div class="form-card animate-on-scroll">
+        <form id="quoteForm" action="https://formsubmit.co/sales@irishstack.com" method="POST" novalidate>
+
+          <!-- FormSubmit hidden fields -->
+          <input type="hidden" name="_subject" value="New Quote Request — Apex IrishStack" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Smith" required autocomplete="name" />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="companyName">Company Name <span class="optional">(optional)</span></label>
+              <input type="text" id="companyName" name="companyName" placeholder="Your company" autocomplete="organization" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" />
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="country">Country <span class="required">*</span></label>
+              <select id="country" name="country" required>
+                <option value="">Select country…</option>
+                <option value="IE" selected>Ireland</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="AU">Australia</option>
+                <option value="CA">Canada</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="NG">Nigeria</option>
+                <option value="ZA">South Africa</option>
+                <option value="IN">India</option>
+                <option value="SG">Singapore</option>
+                <option value="JP">Japan</option>
+                <option value="CN">China</option>
+                <option value="BR">Brazil</option>
+                <option value="MX">Mexico</option>
+                <option value="NO">Norway</option>
+                <option value="NL">Netherlands</option>
+                <option value="BE">Belgium</option>
+                <option value="PL">Poland</option>
+                <option value="IT">Italy</option>
+                <option value="ES">Spain</option>
+                <option value="PT">Portugal</option>
+                <option value="SE">Sweden</option>
+                <option value="FI">Finland</option>
+                <option value="DK">Denmark</option>
+                <option value="AT">Austria</option>
+                <option value="CH">Switzerland</option>
+                <option value="NZ">New Zealand</option>
+                <option value="OTHER">Other</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="category">Category <span class="required">*</span></label>
+              <select id="category" name="category" required>
+                <option value="">Select category…</option>
+                <option value="Air Compressors">Air Compressors</option>
+                <option value="Diesel Engines">Diesel Engines</option>
+                <option value="Electric">Electric</option>
+                <option value="Pneumatic, Power & Hand Tools">Pneumatic, Power &amp; Hand Tools</option>
+                <option value="Testing Instruments">Testing Instruments</option>
+                <option value="Kitchen Equipment">Kitchen Equipment</option>
+                <option value="Mining Equipment">Mining Equipment</option>
+                <option value="Bearings">Bearings</option>
+                <option value="Hydraulics">Hydraulics</option>
+                <option value="Pumps">Pumps (Centrifugal, Vertical, etc.)</option>
+                <option value="Power Transmission">Power Transmission</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="brand">Brand <span class="required">*</span></label>
+              <select id="brand" name="brand" required disabled>
+                <option value="">Select category first…</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="partDescription">Part Number / Description <span class="required">*</span></label>
+            <textarea id="partDescription" name="partDescription" rows="3" placeholder="Enter part number, description, or model reference…" required></textarea>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quantity">Quantity Required</label>
+              <input type="number" id="quantity" name="quantity" min="1" placeholder="1" />
+            </div>
+            <div class="form-group">
+              <label for="notes">Additional Notes <span class="optional">(optional)</span></label>
+              <input type="text" id="notes" name="notes" placeholder="Urgency, preferred brands, specifications…" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            Send Quote Request
+          </button>
+        </form>
+
+        <!-- Success Message -->
+        <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+          <div class="success-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="20" cy="20" r="19" stroke="#22c55e" stroke-width="2"/>
+              <path d="M10 20l7 7 13-14" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Quote Request Sent!</h3>
+          <p>Thank you — we've received your request and will be in touch at <strong id="successEmail"></strong> shortly.</p>
+          <button class="btn-outline" id="resetFormBtn">Submit Another Request</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section class="contact-section section-pad" id="contact">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:sales@irishstack.com" class="contact-value">sales@irishstack.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon contact-icon-wa">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">WhatsApp</span>
+              <a href="https://wa.me/PLACEHOLDER" class="contact-value whatsapp-link" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Republic of Ireland 🇮🇪<br /><small>Serving customers globally</small></span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-full">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+            Message us on WhatsApp
+          </a>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder animate-on-scroll">
+          <div class="map-inner">
+            <div class="map-grid" aria-hidden="true"></div>
+            <div class="map-pin" aria-hidden="true">
+              <svg width="40" height="48" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C9 0 0 9 0 20c0 15 20 28 20 28s20-13 20-28C40 9 31 0 20 0Z" fill="#F97316"/>
+                <circle cx="20" cy="20" r="7" fill="white"/>
+              </svg>
+            </div>
+            <p class="map-label">Republic of Ireland</p>
+            <p class="map-sub"><!-- Drop your Google Maps iframe here --></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-brand">
+            <a href="#home" class="nav-logo" aria-label="Apex IrishStack Home">
+              <svg class="logo-icon" width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="19" cy="19" r="19" fill="#F97316"/>
+                <path d="M19 7L28 28H10L19 7Z" fill="white" stroke="white" stroke-width="0.5"/>
+                <line x1="13" y1="22" x2="25" y2="22" stroke="#F97316" stroke-width="2.5"/>
+              </svg>
+              <span class="logo-text">Apex <span class="logo-accent">IrishStack</span></span>
+            </a>
+            <p class="footer-tagline">Your trusted source for industrial spare parts</p>
+            <p class="footer-copy">&copy; 2025 Apex IrishStack. All rights reserved.</p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <nav aria-label="Footer navigation">
+              <a href="#home">Home</a>
+              <a href="#categories">Categories</a>
+              <a href="#about">About Us</a>
+              <a href="#contact">Contact</a>
+              <a href="#quote">Get a Quote</a>
+            </nav>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <a href="mailto:sales@irishstack.com" class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              sales@irishstack.com
+            </a>
+            <a href="https://wa.me/PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+              </svg>
+              WhatsApp Business
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <span>Registered in the Republic of Ireland 🇮🇪</span>
+        <span>Supplying the world from Ireland</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================ -->
+  <a href="https://wa.me/PLACEHOLDER" target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float" id="waFloat"
+     aria-label="Chat with us on WhatsApp">
+    <div class="wa-pulse" aria-hidden="true"></div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </svg>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
